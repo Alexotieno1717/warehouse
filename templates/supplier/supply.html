@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+
+{% block breadcrumb %}
+ <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'supplier_list' %}">supplier</a>
+          </li>
+          <li class="breadcrumb-item active">{{supplied.contact_person }}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+{% endblock breadcrumb %}
+{% block content %}
+
+<h1>Edit Supply</h1>
+<hr>
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="row">
+      <div class="col-md-12">
+          <input type="hidden" name="id" id="id" value="{{ supplied.id }}" class="form-control" required />
+      </div>
+      <div class="col-md-1">
+        <label for="supplier">Supplier</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="supplier_name" value="{{ supplied.supplier_name }}" placeholder="Supplier" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="contact">Contact</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="contact_person" value="{{ supplied.contact_person }}" placeholder="Contact Person" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="email" name="email" value="{{ supplied.email }}" placeholder="Email Address" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="number" name="phone" value="{{ supplied.phone }}" placeholder="Phone" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="address" value="{{ supplied.address }}" placeholder="Address" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-11">
+          <button type="submit" class="btn btn-sm btn-flat btn-info">Update</button>
+    </div>
+    </div>
+
+
+</form>
+{% endblock %}

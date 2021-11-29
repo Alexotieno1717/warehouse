@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<p>Add Category.</p>
+<p class="text-muted">use this form to add supplier to database</p>
+<div class="container">
+  <form action="#">
+    <div class="row">
+      <div class="col-md-1">
+        <label for="supplier">Supplier</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" value="" placeholder="Regular" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="contact">Contact</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" value="" placeholder="Contact Person" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" value="" placeholder="Email Address" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" value="" placeholder="Phone" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" value="" placeholder="Address" class="form-control" />
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-sm btn-flat btn-info" style="margin-left: 8.5%;">Add Supplier</button>
+  </form>
+</div>
+
+{% endblock content %}

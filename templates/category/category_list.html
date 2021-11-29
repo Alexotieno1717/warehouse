@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Category List{% endblock title %}
+
+
+
+{% block content %}
+  <table id="stafftable" class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>No</th>
+        <th>Category</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>Auto Parts</td>
+      <td>
+        <button class="btn btn-default btn-flat btn-sm ml-2"><i class="nav-icon fas fa-edit"></i> Edit</button>
+        <button class="btn btn-danger btn-flat btn-sm ml-2"><i class="nav-icon fas fa-trash"></i> Delete</button>
+      </td>
+    </tr>
+
+<!--      {% for staff in object_list %}-->
+<!--        <tr class='clickable-row' data-href="#">-->
+<!--          <td>{{ forloop.counter}}</td>-->
+<!--          <td>{{ staff.surname}} {{staff.firstname }} {{staff.other_name }}</td>-->
+<!--          <td>{{ staff.get_gender_display}}</td>-->
+<!--          <td>{{ staff.parent_mobile_number}}</td>-->
+<!--          <td>{{ staff.get_current_status_display}}</td>-->
+<!--        </tr>-->
+        <tr class='clickable-row'>
+          <td>Delani studio</td>
+          <td>Mr. King </td>
+          <td>king@gmail.com</td>
+          <td>0700 111 222</td>
+          <td>delete</td>
+        </tr>
+<!--      {% endfor %}-->
+
+    </tbody>
+  </table>
+{% endblock content %}
+
+
+{% block morejs %}
+<script>
+   $('#stafftable').DataTable({
+    select: false
+    });
+</script>
+
+{% endblock morejs %}

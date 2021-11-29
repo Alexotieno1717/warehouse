@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load sweetify %}
+{% sweetify %}
+
+{% block content %}
+<p>Add Supplier.</p>
+<p class="text-muted">use this form to add supplier to database</p>
+<div class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-1">
+        <label for="supplier">Supplier</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="supplier_name" placeholder="Supplier" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="contact">Contact</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="contact_person" placeholder="Contact Person" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="number" name="phone" placeholder="Phone" class="form-control" required />
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+            <input type="text" name="address" placeholder="Address" class="form-control" required />
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-sm btn-flat btn-info" style="margin-left: 8.5%;">Add Supplier</button>
+  </form>
+
+</div>
+{% endblock content %}
+
